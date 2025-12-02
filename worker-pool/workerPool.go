@@ -25,6 +25,9 @@ type Job struct {
 	id int
 }
 
+// we could define job as => type Job func()-> this allows us to pass any function to be submitted to the worker pool and it'll execute
+// it with given constraints.
+
 type WorkerPool struct {
 	jobs   chan Job
 	ctx    context.Context
